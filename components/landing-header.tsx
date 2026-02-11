@@ -4,15 +4,16 @@ import { useState } from "react"
 import Link from "next/link"
 import Image from "next/image"
 import { Menu, X } from "lucide-react"
+import { openCalendly } from "@/lib/calendly"
 
 const navLinks = [
-  { href: "#platform", label: "Platform" },
-  { href: "#features", label: "Features" },
-  { href: "#use-cases", label: "Use Cases" },
-  { href: "#ai", label: "AI" },
-  { href: "#integrations", label: "Integrations" },
-  { href: "#industries", label: "Industries" },
-  { href: "#pricing", label: "Pricing" },
+  { href: "/platform", label: "Platform" },
+  { href: "/features", label: "Features" },
+  { href: "/use-cases", label: "Use Cases" },
+  { href: "/ai", label: "AI" },
+  { href: "/integrations", label: "Integrations" },
+  { href: "/industries", label: "Industries" },
+  { href: "/pricing", label: "Pricing" },
 ]
 
 export function LandingHeader() {
@@ -64,12 +65,12 @@ export function LandingHeader() {
             >
               Log in
             </Link>
-            <Link
-              href="#book-demo"
+            <button
+              onClick={openCalendly}
               className="ml-4 inline-flex h-9 items-center justify-center rounded-md bg-primary px-4 py-2 text-sm font-medium text-primary-foreground shadow transition-colors hover:bg-primary/90 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50"
             >
               Book Demo
-            </Link>
+            </button>
           </nav>
         </div>
       </div>

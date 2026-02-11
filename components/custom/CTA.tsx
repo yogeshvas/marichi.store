@@ -13,6 +13,7 @@ import {
   CheckCircle2,
 } from "lucide-react";
 import Link from "next/link";
+import { openCalendly } from "@/lib/calendly";
 
 // Animated floating particles
 const FloatingParticle: React.FC<{
@@ -230,7 +231,7 @@ export default function CTA() {
               </motion.div>
             </Link>
 
-            <Link href="#book-demo">
+            <button onClick={openCalendly}>
               <motion.div
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.98 }}
@@ -239,7 +240,7 @@ export default function CTA() {
                 <Send size={16} className="mr-2" />
                 Book a Demo
               </motion.div>
-            </Link>
+            </button>
           </motion.div>
 
           {/* Trust indicators */}

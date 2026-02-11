@@ -41,6 +41,7 @@ export default function Page() {
       <div className="">
         <HowItWorks />
       </div>
+
       <TeamSection />
       <CTA />
       <Footer />
