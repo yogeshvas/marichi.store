@@ -22,24 +22,24 @@ const teamMembers: TeamMember[] = [
   },
   {
     name: "Hanumanth Lal Shukla",
-    role: "Head of Execution",
+    role: "Handles Execution",
     title: "The Operator",
-    image: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?fm=jpg&q=60&w=3000&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8dXNlciUyMHByb2ZpbGV8ZW58MHx8MHx8fDA%3D",
-    linkedin: "#",
+    image: "https://media.licdn.com/dms/image/v2/C4D03AQGudLGag68zig/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1516588103467?e=1772668800&v=beta&t=5VXw82hKuHC41rP5P6iWf275pJsie6OEOPYtKiy27cA",
+    linkedin: "https://www.linkedin.com/in/hanumantl/",
   },
   {
     name: "Ritutaj",
-    role: "Head of Product",
+    role: "Handles Product",
     title: "The Visionary",
     image: "https://media.licdn.com/dms/image/v2/D5603AQFZXdoYn8SsUg/profile-displayphoto-crop_800_800/B56ZtQqA9tJIAI-/0/1766584754466?e=1772668800&v=beta&t=Dj6Ufciuk43ffYvbn1yey16_RCQ8jlClt0wIJMZhYm0",
-    linkedin: "#",
+    linkedin: "https://www.linkedin.com/in/rituraj0810/",
   },
   {
     name: "Yogesh",
-    role: "Head of Technology",
+    role: "Handles Technology",
     title: "The Architect",
-    image: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?fm=jpg&q=60&w=3000&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8dXNlciUyMHByb2ZpbGV8ZW58MHx8MHx8fDA%3D",
-    linkedin: "#",
+    image: "https://media.licdn.com/dms/image/v2/D5622AQHSRPMHSXxSPA/feedshare-shrink_800/B56ZjLBxQDHMAk-/0/1755752897595?e=2147483647&v=beta&t=ymcd1YI-rk2HRSxShZutx9Y4BNSVKx1gPchZQIfieWw",
+    linkedin: "https://www.linkedin.com/in/yogeshvashisth/",
   },
 ];
 
