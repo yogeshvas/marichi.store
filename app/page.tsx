@@ -14,7 +14,7 @@ import TeamSection from "@/components/custom/TeamCards"
 
 export default function Page() {
   return (
-    <div className="flex min-h-screen flex-col">
+    <div className="flex min-h-screen flex-col overflow-x-hidden">
       <LandingHeader />
       <main className="flex-1">
         <HeroSection />
