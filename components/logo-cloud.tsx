@@ -9,6 +9,7 @@ export default function LogoCloud() {
                     <img className="h-20 w-fit dark:invert" src="https://www.apax.com/media/1785/_0093_unilabs.png?rmode=max&width=800&height=400&saturation=0" alt="Unilabs logo" height="16" width="auto" />
                     <img className="h-20 w-fit dark:invert" src="https://dmaxdentalcenter.com/wp-content/uploads/2024/11/D-MAX-Final-Logo-2-1.svg" alt="Unilabs logo" height="16" width="auto" />
                     <img className="h-20 w-fit dark:invert" src="https://www.tigmooeats.com/assets/web/img/logo.png" alt="Unilabs logo" height="16" width="auto" />
+                    <img className="h-20 w-fit dark:invert" src="/pnache.jpeg" alt="Pnache" height="16" width="auto" />
 
                 </div>
             </div>

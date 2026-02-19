@@ -40,8 +40,8 @@ const investors: TeamMember[] = [
     description:
       "A seasoned business professional with extensive industry experience, Shouvik brings strategic insight and long-term perspective to support the company's growth journey and expansion.",
     image:
-      "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?fm=jpg&q=60&w=3000&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8dXNlciUyMHByb2ZpbGV8ZW58MHx8MHx8fDA%3D",
-    linkedin: "#",
+      "/shaubik.jpg",
+    linkedin: "https://www.linkedin.com/in/shouvik-b-a51811/",
   },
   {
     name: "Hanumant Lal Shukla",
