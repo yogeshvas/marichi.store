@@ -41,8 +41,8 @@ const footerLinks = {
     { label: "Webinars", href: "#" },
   ],
   Company: [
-    { label: "About", href: "#" },
-    { label: "Careers", href: "#" },
+    { label: "About", href: "/about" },
+    { label: "Careers", href: "/careers" },
     { label: "Contact", href: "#" },
     { label: "Partners", href: "#" },
     { label: "Press Kit", href: "#" },
@@ -242,17 +242,20 @@ export default function Footer() {
             </div>
 
             <div className="flex flex-wrap items-center gap-6 text-sm text-white/30">
-              {["Privacy Policy", "Terms of Service", "Cookie Policy"].map(
-                (item) => (
-                  <Link
-                    key={item}
-                    href="#"
-                    className="hover:text-white/60 transition-colors"
-                  >
-                    {item}
-                  </Link>
-                )
-              )}
+              {[
+                { label: "Privacy Policy", href: "/privacy" },
+                { label: "Refund Policy", href: "/refund" },
+                { label: "Terms of Service", href: "#" },
+                { label: "Cookie Policy", href: "#" },
+              ].map((item) => (
+                <Link
+                  key={item.label}
+                  href={item.href}
+                  className="hover:text-white/60 transition-colors"
+                >
+                  {item.label}
+                </Link>
+              ))}
             </div>
 
             {/* WhatsApp badge */}

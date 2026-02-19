@@ -171,7 +171,7 @@ function CommerceOrderingVisual() {
       <div className="relative w-32 bg-white rounded-xl shadow-lg border border-neutral-100 p-3">
         <div className="flex justify-between items-center mb-2">
           <div className="w-8 h-8 bg-orange-100 rounded-lg flex items-center justify-center">
-            <ShoppingBag size={14} className="text-orange-600" />
+            <ShoppingBag size={25} className="text-orange-600" />
           </div>
           <div className="bg-orange-600 text-white text-[10px] font-bold px-1.5 py-0.5 rounded-full">
             {cart}
