@@ -9,7 +9,7 @@ const team = [
     name: "Rituraj",
     role: "Visionary",
     description:
-      "A data enthusiast and product-driven entrepreneur, Rituraj brings deep expertise in building scalable platforms across commerce, SaaS, and digital ecosystems. He is driven by a relentless curiosity for understanding how data, technology, and human behavior intersect to create meaningful business impact.",
+      "A data enthusiast and product-driven entrepreneur, Rituraj brings deep expertise in building scalable platforms across commerce, SaaS, and digital ecosystems. He is driven by a relentless curiosity for understanding how data, technology, and human behavior intersect to create meaningful business impact and leads the vision of building intelligent infrastructure for a digital-first future.",
     initials: "R",
     color: "bg-blue-100 text-blue-600",
   },
