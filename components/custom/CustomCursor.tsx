@@ -9,23 +9,33 @@ export default function CustomCursor() {
   const [isClicking, setIsClicking] = useState(false);
   const [isVisible, setIsVisible] = useState(false);
 
+  // Use refs to persist values across renders without re-running effects
+  const mousePos = useRef({ x: 0, y: 0 });
+  const trailPos = useRef({ x: 0, y: 0 });
+  const isHoveringRef = useRef(false);
+  const isClickingRef = useRef(false);
+
+  // Sync refs with state
+  useEffect(() => {
+    isHoveringRef.current = isHovering;
+  }, [isHovering]);
+
+  useEffect(() => {
+    isClickingRef.current = isClicking;
+  }, [isClicking]);
+
   useEffect(() => {
     const cursor = cursorRef.current;
     const trail = trailRef.current;
-    if (!cursor || !trail) return;
-
-    let mouseX = 0;
-    let mouseY = 0;
-    let trailX = 0;
-    let trailY = 0;
 
     const onMouseMove = (e: MouseEvent) => {
-      mouseX = e.clientX;
-      mouseY = e.clientY;
+      mousePos.current.x = e.clientX;
+      mousePos.current.y = e.clientY;
       setIsVisible(true);
 
-      // Main cursor follows instantly
-      cursor.style.transform = `translate(${mouseX}px, ${mouseY}px) translate(-50%, -50%) scale(${isClicking ? 0.8 : isHovering ? 1.5 : 1})`;
+      if (cursor) {
+        cursor.style.transform = `translate(${e.clientX}px, ${e.clientY}px) translate(-50%, -50%) scale(${isClickingRef.current ? 0.8 : isHoveringRef.current ? 1.5 : 1})`;
+      }
     };
 
     const onMouseDown = () => setIsClicking(true);
@@ -33,7 +43,6 @@ export default function CustomCursor() {
     const onMouseLeave = () => setIsVisible(false);
     const onMouseEnter = () => setIsVisible(true);
 
-    // Detect hoverable elements
     const onMouseOver = (e: MouseEvent) => {
       const target = e.target as HTMLElement;
       const isInteractive =
@@ -44,14 +53,20 @@ export default function CustomCursor() {
         target.closest("[role='button']") ||
         target.closest("[data-cursor-hover]") ||
         window.getComputedStyle(target).cursor === "pointer";
+
       setIsHovering(!!isInteractive);
     };
 
-    // Smooth trail animation
     const animate = () => {
-      trailX += (mouseX - trailX) * 0.15;
-      trailY += (mouseY - trailY) * 0.15;
-      trail.style.transform = `translate(${trailX}px, ${trailY}px) translate(-50%, -50%)`;
+      if (trail) {
+        const targetX = mousePos.current.x;
+        const targetY = mousePos.current.y;
+
+        trailPos.current.x += (targetX - trailPos.current.x) * 0.15;
+        trailPos.current.y += (targetY - trailPos.current.y) * 0.15;
+
+        trail.style.transform = `translate(${trailPos.current.x}px, ${trailPos.current.y}px) translate(-50%, -50%)`;
+      }
       requestAnimationFrame(animate);
     };
 
@@ -61,6 +76,7 @@ export default function CustomCursor() {
     document.addEventListener("mouseover", onMouseOver);
     document.documentElement.addEventListener("mouseleave", onMouseLeave);
     document.documentElement.addEventListener("mouseenter", onMouseEnter);
+
     const animationId = requestAnimationFrame(animate);
 
     return () => {
@@ -72,7 +88,7 @@ export default function CustomCursor() {
       document.documentElement.removeEventListener("mouseenter", onMouseEnter);
       cancelAnimationFrame(animationId);
     };
-  }, [isClicking, isHovering]);
+  }, []); // Run once, depend on refs for mutable values
 
   // Hide on touch devices
   const [isTouchDevice, setIsTouchDevice] = useState(false);
@@ -84,7 +100,6 @@ export default function CustomCursor() {
 
   return (
     <>
-      {/* Hide default cursor globally */}
       <style jsx global>{`
         * {
           cursor: none !important;
@@ -104,6 +119,9 @@ export default function CustomCursor() {
           border: `2px solid ${isHovering ? "oklch(66.166% 0.19307 24.035)" : "rgba(255, 255, 255, 0.5)"}`,
           pointerEvents: "none",
           zIndex: 99999,
+          // Removed width/height/border-color transitions from JS style object to avoid fighting with the animation loop if we were animating them, 
+          // but here we are only animating transform in the loop.
+          // Keeping transitions for size/color changes.
           transition: "width 0.3s cubic-bezier(0.23, 1, 0.32, 1), height 0.3s cubic-bezier(0.23, 1, 0.32, 1), border-color 0.3s ease, opacity 0.3s ease",
           opacity: isVisible ? 1 : 0,
           mixBlendMode: "difference",
@@ -123,7 +141,8 @@ export default function CustomCursor() {
           backgroundColor: isHovering ? "oklch(66.166% 0.19307 24.035)" : "#fff",
           pointerEvents: "none",
           zIndex: 100000,
-          transition: "width 0.2s ease, height 0.2s ease, background-color 0.3s ease, opacity 0.3s ease, transform 0.05s linear",
+          transition: "width 0.2s ease, height 0.2s ease, background-color 0.3s ease, opacity 0.3s ease",
+          // Removed transform transition from CSS as it's handled by JS for instant follow
           opacity: isVisible ? 1 : 0,
           mixBlendMode: "difference",
         }}
