@@ -24,7 +24,7 @@ const leadership: TeamMember[] = [
   },
   {
     name: "Yogesh Vashisth",
-    role: "Architecture",
+    role: "Architect",
     description:
       "An engineering-focused technology leader, Yogesh specializes in designing scalable, resilient, and high-performance systems that power enterprise-grade platforms. His commitment to clean architecture and engineering excellence ensures the technology foundation is built for reliability, scalability, and future growth.",
     image:
