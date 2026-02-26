@@ -12,7 +12,6 @@ export default function LogoCloud() {
                     <img className="h-20 w-fit dark:invert" src="/pnache.jpeg" alt="Pnache" height="16" width="auto" />
                     <img className="h-20 w-fit dark:invert" src="https://www.mercury.co.zm/wp-content/uploads/2018/10/logo-300.png" alt="mercury logistics" height="16" width="auto" />
                     <img className="h-20 w-fit dark:invert rounded-full" src="/damax.jpeg" alt="mercury logistics" height="16" width="auto" />
-
                 </div>
             </div>
         </section>
