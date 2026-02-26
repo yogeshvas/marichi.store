@@ -153,13 +153,17 @@ export function HeroSection() {
           transition={{ duration: 0.5, delay: 0.4 }}
         >
           <Link
-            href="/signup"
+            href="https://wa.me/260773903240?text=I%20want%20to%20know%20more%20about%20the%20company"
+            target="_blank"
+            rel="noopener noreferrer"
             className="inline-flex h-11 items-center justify-center rounded-md bg-primary px-8 text-sm font-medium text-primary-foreground shadow transition-colors hover:bg-primary/90 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50"
           >
             Get Started for Free <ArrowRight className="ml-2 h-4 w-4" />
           </Link>
           <Link
-            href="#demo"
+            href="https://calendly.com/marichisolutions/30min"
+            target="_blank"
+            rel="noopener noreferrer"
             className="inline-flex h-11 items-center justify-center rounded-md border border-input bg-background px-8 text-sm font-medium shadow-sm transition-colors hover:bg-accent hover:text-accent-foreground focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50"
           >
             Request Demo
