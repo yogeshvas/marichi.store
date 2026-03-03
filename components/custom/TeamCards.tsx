@@ -28,7 +28,7 @@ const leadership: TeamMember[] = [
     description:
       "An engineering-focused technology leader, Yogesh specializes in designing scalable, resilient, and high-performance systems that power enterprise-grade platforms. His commitment to clean architecture and engineering excellence ensures the technology foundation is built for reliability, scalability, and future growth.",
     image:
-      "https://media.licdn.com/dms/image/v2/D5622AQHSRPMHSXxSPA/feedshare-shrink_800/B56ZjLBxQDHMAk-/0/1755752897595?e=2147483647&v=beta&t=ymcd1YI-rk2HRSxShZutx9Y4BNSVKx1gPchZQIfieWw",
+      "/yogesh.jpeg",
     linkedin: "https://www.linkedin.com/in/yogeshvashisth/",
   },
 ];
