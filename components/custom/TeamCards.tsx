@@ -19,7 +19,7 @@ const leadership: TeamMember[] = [
     description:
       "A data enthusiast and product-driven entrepreneur, Rituraj brings deep expertise in building scalable platforms across commerce, SaaS, and digital ecosystems. He is driven by a relentless curiosity for understanding how data, technology, and human behavior intersect to create meaningful business impact and leads the vision of building intelligent infrastructure for a digital-first future.",
     image:
-      "https://media.licdn.com/dms/image/v2/D5603AQFZXdoYn8SsUg/profile-displayphoto-crop_800_800/B56ZtQqA9tJIAI-/0/1766584754466?e=1772668800&v=beta&t=Dj6Ufciuk43ffYvbn1yey16_RCQ8jlClt0wIJMZhYm0",
+      "/rituraj-sir.png",
     linkedin: "https://www.linkedin.com/in/rituraj0810/",
   },
   {
@@ -49,7 +49,7 @@ const investors: TeamMember[] = [
     description:
       "A seasoned business leader with strong operational expertise, Hanumant provides guidance in building scalable operational frameworks and driving execution excellence across markets.",
     image:
-      "https://media.licdn.com/dms/image/v2/C4D03AQGudLGag68zig/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1516588103467?e=1772668800&v=beta&t=5VXw82hKuHC41rP5P6iWf275pJsie6OEOPYtKiy27cA",
+      "/shukla-sir.jpeg",
     linkedin: "https://www.linkedin.com/in/hanumantl/",
   },
 ];
