@@ -50,10 +50,12 @@ const footerLinks = {
 };
 
 const socialLinks = [
-  { icon: Twitter, href: "#", label: "Twitter" },
-  { icon: Linkedin, href: "#", label: "LinkedIn" },
-  { icon: Instagram, href: "#", label: "Instagram" },
-  { icon: Youtube, href: "#", label: "YouTube" },
+
+  {
+    icon: Linkedin, href: "#https://www.linkedin.com/company/marichi", label: "LinkedIn"
+  },
+  { icon: Instagram, href: "https://www.instagram.com/marichilabs/", label: "Instagram" },
+  { icon: Youtube, href: "https://www.youtube.com/@MarichiSolutions", label: "YouTube" },
 ];
 
 export default function Footer() {
@@ -141,17 +143,17 @@ export default function Footer() {
               {[
                 {
                   icon: Mail,
-                  text: "hello@marichi.in",
-                  href: "mailto:hello@marichi.in",
+                  text: "hello@marichisolutions.com",
+                  href: "hello@marichisolutions.com",
                 },
                 {
                   icon: Phone,
-                  text: "+91 98765 43210",
-                  href: "tel:+919876543210",
+                  text: "+260 773903240",
+                  href: "tel:+260773903240",
                 },
                 {
                   icon: MapPin,
-                  text: "Mumbai, India",
+                  text: "Lusaka, Zambia",
                   href: "#",
                 },
               ].map((item) => (
